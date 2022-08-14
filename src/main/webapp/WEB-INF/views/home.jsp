@@ -821,22 +821,41 @@ document.getElementById('downloadBtn').addEventListener("click", function(event)
 
 //
 $("#ajaxtest").click(function (){
-	$.ajax({
-		url: 'apitestpost',
-		data: JSON.stringify({
-			id: 'myid',
-			password: 'mypassword'
-		}),
-		type: 'POST',
-		dataType: 'json',
-		contentType: 'application/json',
-		success: function (response){
-			console.log(response);
-		},
-		error: function (error){
-			console.log(error);
-		}
-	})
+	// jquery AJAX sample
+	// $.ajax({
+	// 	url: 'apitestpost',
+	// 	data: JSON.stringify({
+	// 		id: 'myid',
+	// 		password: 'mypassword'
+	// 	}),
+	// 	type: 'POST',
+	// 	dataType: 'json',
+	// 	contentType: 'application/json',
+	// 	success: function (response){
+	// 		console.log(response);
+	// 	},
+	// 	error: function (error){
+	// 		console.log(error);
+	// 	}
+	// })
+
+	// vanilla js AJAX sample
+	(async () => {
+		const rawResponse = await fetch('/apitestpost', {
+			method: 'POST',
+			headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({
+				id: 'myid',
+				password: 'mypassword'
+			})
+		});
+		const content = await rawResponse.json();
+
+		console.log('result:',content);
+	})();
 })
 //
 $("#Aspera_UP_close_btn").click(function(){
