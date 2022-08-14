@@ -838,6 +838,7 @@ $("#ajaxtest").click(function (){
 	// 		console.log(error);
 	// 	}
 	// })
+	//
 
 	// vanilla js AJAX sample
 	(async () => {
