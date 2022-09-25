@@ -80,6 +80,6 @@ public class TransferSpec {
         this.lock_policy = "false";
         this.lock_target_rate = "false";
         this.min_rate_kbps = 0;
-        this.target_rate_kbps = 1000000;
+        this.target_rate_kbps = 100000;
     }
 }

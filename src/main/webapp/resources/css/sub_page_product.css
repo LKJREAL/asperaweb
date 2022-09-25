@@ -1,0 +1,501 @@
+body {
+    background: #000;
+    color: #fff;
+}
+.visual {
+    width: 100%;
+    height:100%;
+    position: relative;
+}
+.visual > img {
+    width: 100%;
+    height: 100%;
+}
+.visual_content > img {
+    position:absolute;
+    opacity:0;
+    width:70%;
+    max-width: 1239px;
+    top: 100px;
+    left: 7.3%;
+    animation: visual_text 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.scroll {
+    position: absolute;
+    /*top:85.5%;*/
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.62;
+}
+.scroll p:nth-of-type(1) {
+    overflow: hidden;
+    height: 30px;
+}
+.scroll p:nth-of-type(2) {
+    overflow: hidden;
+    height: 55px;
+    margin: 20px 0 24px;
+    
+}
+.scroll .text {
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 400;
+    animation: scroll_text 2s infinite linear;
+}
+.bar {
+    margin: 0 auto ;
+    display: block;
+    width: 2px;
+    height: 55px;
+    background: #fff;
+    animation: scroll_bar 2s infinite ease-in-out;
+    border-radius: 1px;
+}
+@keyframes visual_text {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+    
+}
+@keyframes scroll_text {
+    0% {
+        padding-top: 0
+    }
+    18% {
+        padding-top:0;
+    }
+    70% {
+         padding-top:30px;
+    }
+     100% {
+        padding-top:30px;
+    }
+}
+@keyframes scroll_bar {
+    0% {
+        margin-top: 0
+    }
+    100% {
+        margin-top: 55px;
+    }
+    
+}
+.sec4 {
+    display: none;
+}
+
+/*sec1 영역*/
+.sec1 {
+    margin-top: 14rem;
+}
+.sec1 .title , .sec1 .content {
+    opacity: 0;
+    transition: 0.8s;
+}
+.sec1 .title {
+    position: relative;
+    top: 4rem;
+}
+.sec1 .title h2 {
+    font-size: 3rem;
+}
+.sec1 .title p {
+    font-size: 1.5rem;
+    font-weight: 300;
+} 
+.sec1 .content {
+    position: relative;
+    top: 7rem;
+    transition-delay: 0.8s;
+    width: 100%;
+}
+.sec1 .content img {
+    display: block;
+    width: 100%;
+    max-width: 1330px;
+    margin: 4.5rem auto 0;
+}
+.sec1 .title.on, .sec1 .content.on {
+    top: 0;
+    opacity: 1;
+}
+
+
+.sec2 {
+    margin: 20rem auto 24rem;
+    height: 100%;
+}
+.sec2_content {
+    width: 100%;
+    height: 805px;
+    position: relative;
+}
+.sec2_content img {
+    position: absolute;
+    left: 90px;
+    top: 55px;
+    transition: 0.8s;
+    opacity: 0;
+}
+.sec2_content .text {
+    position: absolute;
+    right: 70px;
+    bottom:2.36%;
+    text-align: right;
+    line-height: 1.5rem;
+    opacity: 0;
+    transition-delay:2s;
+    transition:2.5s;
+}
+.sec2_content .text strong {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+.sec2_content .text span {
+    color: #ffde00;
+}
+.sec2_content .text p {
+    display: block;
+    margin-top: 10px;
+     font-size: 1.3rem;
+    font-weight: 300;
+}
+.sec2_content img.on {
+    top: 0;
+    opacity:1;
+}
+.sec2_content .text.on {
+    bottom: 21.36%;
+    opacity: 1;
+}
+
+
+/*sec3 영역*/
+.sec3 {
+    width: 100%;
+    max-width: 1920px;
+    overflow: hidden;
+    margin: 0 auto 310px;
+}
+.sec3_wrap {
+    overflow: hidden;
+} 
+.sec3 .top, .sec3 .bottom  {
+    display: flex;
+    justify-content: space-between;
+}
+.sec3 .sec3_wrap >div img {
+    position: relative;
+    opacity: 0;
+    transition: 1s;
+}
+.sec3 .img_text {
+    opacity: 0;
+    transition: 1s;
+}
+.sec3 .top .img_text.on, .sec3 .bottom .img_text.on {
+    opacity: 1;
+}
+.sec3 .top img.on {
+    left: 0;
+    opacity: 1;
+}
+.sec3 .top img {
+    left: -2rem;
+    width: 62.5%;
+    height: auto;
+}
+
+.sec3 .img_text span{
+    display: block;
+    margin-bottom: 35px;
+    font-size: 28px;
+    font-weight: bold;
+    position: relative;
+}
+.sec3 .img_text span:after {
+    content: '';
+    position: absolute;
+    bottom:-14px;
+    left: 0;
+    width: 200%;
+    height: 2px;
+    background: #ffde00;
+}
+.sec3 .img_text strong {
+    color: #ffde00;
+}
+.sec3 .img_text p {
+    padding-left: 16px;
+    font-weight: 100;
+    font-size: 17px;
+    line-height: 32px;
+}
+.sec3 .bottom {
+    flex-direction: row-reverse;
+    margin-top: 200px;
+}
+.sec3 .bottom img.on {
+    opacity: 1;
+    right: 0;
+}
+.sec3 .bottom img {
+    width: 45.52%;
+    right:-2rem;
+}
+.sec3 .bottom .img_text span:after {
+    left: auto;
+    right: 0;
+}
+.sec4 {
+    position: relative;
+}
+.sec4_bg {
+    width: 100%;
+    height: 100%;
+}
+.sec4_bg img {
+    width: 100%;
+    max-width: 1920px;
+    animation: sec4_ani 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes sec4_ani {
+    0% {
+       transform: scale(1);
+    }
+    40% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.7);
+    }
+}
+.sec4 .camera {
+    position: absolute;
+    left: 40%;
+    bottom:8%;
+    display: flex;
+    flex-direction: row-reverse;
+    height: 364px;
+    
+}
+.sec4 .camera img {
+    width: 100%;
+    height: 100%;
+    padding-left: 47%;
+}
+.sec4 .camera:before {
+    content: '4K UHD의 아름다운 영상 표현';
+    font-size: 24px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+@media screen and (max-width:1280px){
+    .visual_content > img {
+        width: 58%;
+        top: 12%;
+    }
+
+    .scroll .text {
+        font-size: 16px;
+    }
+    .scroll p:nth-of-type(2) {
+        margin:0.8rem 0 ;
+    }
+    .scroll p:nth-of-type(1) {
+        height:1.2rem;
+    }
+    .sec1 .content {
+        padding: 0 2rem;
+        box-sizing: border-box;
+    }
+    .sec2 {
+        width: 100%;
+    }
+    .sec2_content {
+        
+    }
+    .sec2_content img {
+        width: 62%;
+    }
+    .sec3_wrap {
+        width: 100%;
+        padding: 0 1.5rem;
+        box-sizing: border-box;
+    }
+    .sec3 .top img {
+        width: 50.5%;
+    }
+    .sec3 .bottom img {
+        width: 40.52%;
+    }
+    .sec3 .img_text span {
+        font-size: 1.3rem;
+    }
+    .sec3 .img_text p {
+        font-size: 0.8rem;
+        line-height: 1.8;
+    }
+}
+
+@media screen and (max-width:960px){
+     html {
+        font-size: 18px;
+    }
+    .scroll .text {
+        font-size: 0.8rem;
+    }
+    .scroll p:nth-of-type(1) {
+        height:1.2rem;
+    }
+    .bar {
+        width: 1px;
+    }
+    .bar, .scroll p:nth-of-type(2)  {
+        height: 2.2rem;
+    }
+    .scroll p:nth-of-type(2) {
+        margin:0.5rem 0 ;
+    }
+    .sec2_content .text strong {
+        font-size: 1.3rem;
+    }
+    .sec2_content .text p {
+        margin-top: 0;
+        font-size: 1rem;
+    }
+    .sec3_wrap {
+        padding: 0 1rem 0;
+    }
+    .sec3 .img_text span {
+        font-size: 1rem;
+    }
+    .sec3 .img_text p {
+        font-size: 0.7rem;
+        line-height: 1.8;
+    }
+    
+}
+@media screen and (max-width:730px){
+    .scroll .text {
+        font-size: 13px;
+    }
+   .bar, .scroll p:nth-of-type(2)  {
+        height: 1.5rem;
+    }
+    .sec1 .title h2 {
+        font-size: 2.5rem;
+    }
+    .sec1 .title p {
+        font-size: 1.2rem;
+    }
+    
+    .sec2 {
+        margin: 14rem auto 15rem;
+    }
+    .sec2_content img {
+        width: 75%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .sec2_content .text {
+        bottom: -15%;
+        right: 8%;
+    }
+    .sec2_content .text.on {
+        bottom: -5%;
+    }
+    
+    .sec3_wrap {
+        padding: 0 3rem;
+    }
+    .sec3 .top, .sec3 .bottom {
+        flex-wrap: wrap;
+    }
+    .sec3 .top img{
+        width: 75%;
+    }
+    .sec3 .bottom img {
+        width: 65%;
+    }
+    .sec3_wrap .img_text {
+        padding-top: 2.8rem;
+    }
+    .sec3_wrap .top .img_text {
+        margin:0 0 0 39%;
+    }
+    .sec3_wrap .bottom .img_text {
+        margin: 0 39% 0 0;
+    }
+    
+    
+    
+    /*.sec4*/
+    
+}
+@media screen and (max-width:470px){
+     html{
+        font-size: 15px;
+    }
+    .bar, .scroll p:nth-of-type(2)  {
+        height: 1.1rem;
+    }
+     .scroll .text {
+        font-size: 12px;
+    }
+    .sec1 {
+        margin-top: 12rem;
+    }
+    .sec1 .title h2 {
+        font-size: 2rem;
+    }
+    .sec1 .title p {
+        font-size: 1rem;
+    }
+    .sec2 {
+        margin: 10rem auto 15rem;
+    }
+    .sec2_content .text {
+        bottom: -35%;
+    }
+    .sec2_content .text.on {
+        bottom: -25%;
+    }
+}
+@media screen and (max-width:380px){
+     .sec1 {
+        margin-top: 10rem;
+    }
+    .sec2_content .text strong {
+        font-size: 1.1rem;
+    }
+    .sec2_content .text p {
+        font-size: 0.9rem;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

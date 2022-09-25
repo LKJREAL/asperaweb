@@ -78,15 +78,18 @@ public class asperaService {
 	// files api 泥섎━
 	public StringBuilder files(String api, String current, String[] target) {
 		try {
-			URL url = new URL("https://115.71.42.22:9092/files/" + api);
+ 			URL url = new URL("https://115.71.42.22:9092/files/" + api);
+//			URL url = new URL("https://localhost:9092/files/" + api);
 
-			ignoreSSL(); // SSL �씤利앸갑�떇 鍮꾪솢�꽦�솕�빐�빞�븳�떎
+			 ignoreSSL(); // SSL �씤利앸갑�떇 鍮꾪솢�꽦�솕�빐�빞�븳�떎
 
 			HttpURLConnection con = (HttpURLConnection) url.openConnection();
 			con.setConnectTimeout(5000);
 			con.setReadTimeout(5000);
 
-			String name = "admin";
+//			String name = "node_asperatest";
+//			String password = "Passw0rd!";
+ 			String name = "admin";
 			String password = "rootroot";
 
 			String authString = name + ":" + password;
@@ -137,6 +140,8 @@ public class asperaService {
 			OutputStreamWriter wr = new OutputStreamWriter(con.getOutputStream());
 			wr.write(json); // json �삎�떇�쓽 message �쟾�떖
 			wr.flush();
+
+			/////////////////////////////////////////////////////////////////////////////////////////
 
 			StringBuilder sb = new StringBuilder();
 			if (con.getResponseCode() == HttpURLConnection.HTTP_OK) {

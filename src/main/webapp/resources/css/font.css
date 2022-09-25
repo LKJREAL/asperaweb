@@ -1,0 +1,46 @@
+/*
+@charset "utf-8";  이거는 css 맨 처음 적용시 있어야 하는 부분임 */
+/* 여기에 이렇게 넣거나, jsp 혹은 html 에 style 넣어서 사용가능(여기 프로그램 테스트에는 jsp 에 적용함 .
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
+*/
+
+/* reset.css 에 font-family 가 있어서 그곳에 다시 선언함.
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+*/
+
+
+/*폰트 다운로드 방식 적용 방법*/
+
+/**/
+@font-face {
+    font-family: 'IBMPlexSansKR';/*Light*/
+    font-style: normal;
+    font-weight: 100;
+    src: local('IBMPlexSansKR-ExtraLight'), local('IBMPlexSansKR-ExtraLight'), url(/fonts/IBMPlexSansKR-ExtraLight.eot);
+    src: url(/fonts/IBMPlexSansKR-ExtraLight.eot?#iefix) format('embedded-opentype'),
+    url(/fonts/IBMPlexSansKR-ExtraLight.woff2) format('woff2'),
+    url(/fonts/IBMPlexSansKR-ExtraLight.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'IBMPlexSansKR';/*Medium*/
+    font-style: normal;
+    font-weight: 500;
+    src: local('IBMPlexSansKR-Medium'), local('IBMPlexSansKR-Medium'), url(/fonts/IBMPlexSansKR-Medium.eot);
+    src: url(/fonts/IBMPlexSansKR-Medium.eot?#iefix) format('embedded-opentype'),
+    url(/fonts/IBMPlexSansKR-Medium.woff2) format('woff2'),
+    url(/fonts/IBMPlexSansKR-Medium.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'IBMPlexSansKR';/*Regular*/
+    font-style: normal;
+    font-weight: 400;
+    src: local('IBMPlexSansKR-Regular'), local('IBMPlexSansKR-Regular'), url(/fonts/IBMPlexSansKR-Regular.eot);
+    src: url(/fonts/IBMPlexSansKR-Regular.eot?#iefix) format('embedded-opentype'),
+    url(/fonts/IBMPlexSansKR-Regular.woff2) format('woff2'),
+    url(/fonts/IBMPlexSansKR-Regular.woff) format('woff');
+}
+

@@ -1,0 +1,385 @@
+@charset "UTF-8";
+
+
+#foot {
+	text-align:right;
+}
+
+#info {
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+
+}
+
+#info:hover {
+  background-color: #eee;
+}
+
+#infoPannel
+{
+	display: none;
+}
+
+*:focus
+{
+	outline:none !Important;
+}
+body
+{
+	padding: 25px;
+}
+#uploadArea
+{
+	margin-bottom: 25px;
+}
+.headerRow, .headerRow a, .headerRow a:hover, .headerRow a:focus, .headerRow a:visited
+{
+	font-weight:bold;
+	color: #333333;
+	text-decoration:none;
+}
+.headerRow
+{
+	cursor: pointer;
+}
+.type-col
+{
+	width: 7%;
+	text-align:center;
+}
+.name-col
+{
+	width: 45%;
+	/*width: 45%  !important;*/
+
+}
+.size-col
+{
+	width: 10%;
+}
+.mod-col
+{
+	width: 25%;
+	white-space:nowrap;
+}
+.act-col
+{
+	width: 13%;
+}
+.page-title
+{
+	margin-bottom: 20px;
+	margin-top:0;
+}
+#searchBtn
+{
+	min-width:100px;
+}
+#log-data
+{
+	text-align:right;
+}
+
+#currentDir
+{
+	font-weight:bold;
+	font-size:18px;
+}
+#sortIcon
+{
+	float: right;
+}
+
+.sort-icon
+{
+	margin-left: 2px;
+	display:none;
+}
+
+.sort-icon.sortFirst
+{
+	display:inline !Important;
+}
+
+.sort-icon.sortSecond
+{
+	display:inline !Important;
+}
+
+.sort-icon.sortSecond:before
+{
+	content: "\e156" !Important;
+}
+
+.progress-td
+{
+	background-color: #DFF2BF;
+	-webkit-transition: width .6s ease;
+	-o-transition: width .6s ease;
+	transition: width .6s ease;
+}
+.progressMessage {
+	color: #999;
+	margin-left: 15px;
+}
+
+#backDiv
+{
+	display:inline-block;
+	width:0;
+	margin-right:20px;
+	overflow:hidden;
+}
+
+#backButton
+{
+	white-space:nowrap;
+}
+
+#pageMenuButton
+{
+	position:relative;
+	float:right;
+}
+
+#pageMenuButton a
+{
+	color: #333;
+}
+.searchArea
+{
+	position: relative;
+}
+#clearSearch
+{
+	position: absolute;
+	top: 1px;
+	right: 7px;
+	font-size: 25px;
+	color: #ccc;
+	display:none;
+}
+#uploadArea > div {
+	width: 100%;
+}
+
+.bg_st_02 {
+	background: #fccb90;
+}
+.bg_st_03 {
+	 background: #f1a899;
+ }
+.bg_img_mou {
+	background: url(/resources/image/mountain.jpg) 50% / cover;
+}
+
+#fileListTable tbody tr td {
+	padding: 8px;
+}
+#fileListTable tr > * {
+	border-left:1px solid #ddd ;
+}
+#fileListTable tr > *:last-child{
+	border-right:1px solid #ddd ;
+}
+#fileListTable tbody tr:first-child {
+	border-top: 1px solid #ddd;
+}
+html {
+	font-size: 16px;
+}
+#transferPopup {
+	border-radius: 15px;
+	overflow: hidden;
+	border: none !important;
+	box-shadow: 0 0 15px rgba(0,0,0,.4);
+	/*box-shadow: 0 0 15px rgba(0,0,0,.4); box-shadow: x축 y축 효과의 너비 색상:rgba(0,0,0,.4) 0,0,0은 블랙색상이고 255,255,255는 화이트색상, .4는 투명도*/
+	height: auto !important;
+	min-height: 300px;
+	z-index: 9;
+	background: #fff !important;
+	padding-bottom: 30px;
+}
+#transferPopup #header, #transferPopup #body  {
+	padding: 10px;
+}
+#transferPopup #header {
+	color: #6c6caa !important;
+	background: #fff !important;
+	height: auto !important;
+}
+.pop_status {
+	background: #eee;
+	border-radius: 5px;
+}
+#transferPopup #bottom input {
+	border-radius: 5px;
+	padding: 5px 15px;
+	width: auto !important;
+	background: #198754;
+}
+#transferPopup #bottom input:hover {
+	box-shadow: 0 0 5px rgba(25, 135, 84, .5);
+	color: #198754;
+	background: #fff;
+	border: 1px solid #198754 !important;
+
+}
+#transferPopup #bottom input.red_btn {
+	color: #fff;
+	background: red;
+
+}
+#transferPopup #bottom input:hover.red_btn {
+	color: red;
+	background: #fff;
+	border: 1px solid red !important;
+
+}
+.close_btn_st {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	float: none !important;
+}
+/*#Aspera_UP_total_upload_progress_bar {
+	/*animation: ani_bar 3s linear ;*/
+/*	background: #0a53be;
+	border-radius: 10px;
+	transition: 0.3s;
+}*/
+
+#transferPopup {
+	width: 40vw !important;
+	height: 40vh !important;
+	/*width: 40vw; 40vw란 브라우저 전체 화면 가로사이즈의 40%를 의미한다  */
+	/*height: 60vh; 60vw란 브라우저 전체 화면 세로사이즈의 60%를 의미한다  */
+}
+
+
+
+
+/*@keyframes ani_bar {*/
+/*	0% {*/
+/*		width: 0%;*/
+/*	}*/
+/*	100% {*/
+/*		width: 80%;*/
+/*	}*/
+
+/*}*/
+
+/*파일전송 팝업 너비값 수정*/
+.fprogress {
+	width: calc(100% - 33.3%) !important;
+}
+#Aspera_UP_uploading_file_list > li  .fname {
+	width: 33.3% !important;
+}
+#Aspera_UP_uploading_file_list > li .st {
+	width: 50% !important;
+	text-align: center !important;
+	display: inline-block !important;
+}
+#Aspera_UP_uploading_file_list > li .transfer_status  {
+	width: 49% !important;
+	text-align: center !important;
+	display: inline-block !important;
+
+}
+#Aspera_UP_uploading_file_list > li .st + .pbar , #Aspera_init_chk{
+	display: none !important;
+}
+button.red_bg {
+	background: darkred ;
+}
+button.blue_bg {
+	background: #0a53be;
+}
+button.btn-success:hover {
+	background: #fccb90;
+}
+.input-group button {
+	position: relative;
+	padding-left: 30px;
+}
+.input-group button:before {
+	display: block;
+	content: '';
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 5px;
+	width: 20px;
+	height: 20px;
+}
+/*.input-group button#refresh:before {
+	background: url("../image/icon/refresh.png")no-repeat 50% / cover;
+
+	input-group button#refresh:hover:before {
+	background: url("../image/icon/refresh_01.png")no-repeat 50% / cover;
+	}
+
+
+} */
+
+
+/* basic color is white for Refresh - vector icon from w3.com internet */
+.input-group button .svg_01 {
+	width: 20px;
+	height: 20px;
+	fill: #fff;
+}
+/* On-mouse-cursor color is black for Refresh - vector icon from w3.com internet */
+.input-group button:hover .svg_01 {
+	fill: #000;
+}
+
+.input-group button#create:before {
+	background: url("../image/icon/newfolder.png")no-repeat 50% / cover;
+}
+
+.input-group button#create:hover:before {
+	background: url("../image/icon/newfolder_01.png")no-repeat 50% / cover;
+}
+
+
+.input-group button#downloadBtn:before {
+	background: url("../image/icon/download_01.png")no-repeat 50% / cover;
+}
+.input-group button#downloadBtn:hover:before {
+	background: url("../image/icon/download.png")no-repeat 50% / cover;
+}
+.input-group button#uploadfile:before {
+	background: url("../image/icon/upload_01.png")no-repeat 50% / cover;
+}
+.input-group button#uploadfile:hover:before {
+	background: url("../image/icon/upload.png")no-repeat 50% / cover;
+}
+.input-group button#uploadfolder:before {
+	background: url("../image/icon/folderUpload.png")no-repeat 50% / cover;
+}
+.input-group button#deleteBtn:before {
+	background: url("../image/icon/delete.png")no-repeat 50% / cover;
+}
+.input-group button#transferWindowBtn:before {
+	 background: url("../image/icon/transferWindow.png")no-repeat 50% / cover;
+ }
+.input-group button#ajaxtest, .input-group button#refresh {
+	padding-left: 0.5rem ;
+}
+.input-group button ~ button {
+	/*margin-left: 5%;*/
+	margin-left: 5px !important;
+}
+
+
+/* Since this version is responsive, we remove the date when on mobile to ensure it looks good on the small screen */
+@media screen and (max-width: 700px) {
+	
+	.mod-col
+	{
+		display:none;
+	}
+}

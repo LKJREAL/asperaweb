@@ -4,76 +4,246 @@
 
 <html>
 	<head>
-		<title>ASPERA by KJLEE</title>
+		<title>ASPERA</title>
 		<meta charset="utf-8">
    	 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
-    	<link rel="stylesheet" href="resources/reset.css">
-		<link rel="stylesheet" href="/resources/lib/jquery-ui.min.css">
+
+		<%--font--%>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+
+
+		<!-- css에 기입시엔 <style></style> 제외후 @import 부터 적용 -->
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
+		</style>
+		<!-- css에 기입시엔 <style></style> 제외후 @import 부터 적용 -->
+
+
+		<!--css -->
+		<link href="${pageContext.request.contextPath}/resources/css/reset.css" rel="stylesheet">
+
+
+		<link href="${pageContext.request.contextPath}/resources/css/font.css" rel="stylesheet">
+		<link href="${pageContext.request.contextPath}/resources/css/jquery.bxslider.min.css" rel="stylesheet">
+		<link href="${pageContext.request.contextPath}/resources/css/main.css" rel="stylesheet">
+
+
+		<link href="${pageContext.request.contextPath}/resources/css/sub_page_product.css" rel="stylesheet">
+		<link href="${pageContext.request.contextPath}/resources/css/sub_page_style.css" rel="stylesheet">
+		<link href="${pageContext.request.contextPath}/resources/css/swiper-bundle.css" rel="stylesheet">
+		<link href="${pageContext.request.contextPath}/resources/css/test02.css" rel="stylesheet">
+		<link href="${pageContext.request.contextPath}/resources/css/all.css" rel="stylesheet">
+
+
+
+
+
+
+       <!--<script src="https://kit.fontawesome.com/501f197652.js" crossorigin="anonymous"></script>-->
+
+
+
+
+
+       <!--js script-->
+       <script src="${pageContext.request.contextPath}/resources/script/jquery-3.5.1.min.js"></script>
+       <script src="${pageContext.request.contextPath}/resources/script/jquery.bxslider.min.js"></script>
+       <script src="${pageContext.request.contextPath}/resources/script/main.js"></script>
+
+       <script src="${pageContext.request.contextPath}/resources/script/sub_new.js"></script>
+       <script src="${pageContext.request.contextPath}/resources/script/swiper.min.js"></script>
+       <script src="${pageContext.request.contextPath}/resources/script/all.js"></script>
+
+       <link href="${pageContext.request.contextPath}/resources/css/progressbar.css" rel="stylesheet">
+
+
+<!--    	<link rel="stylesheet" href="resources/reset.css"> -->
+       <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/jquery-ui.min.css">
 <%--    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>--%>
-		<script type="text/javascript" src="/resources/lib/jquery-3.6.0.min.js"></script>
-		<script type="text/javascript" src="/resources/lib/jquery-ui.min.js"></script>
+
+
+<%--		<script type="text/javascript" src="/resources/lib/jquery-3.6.0.min.js"></script>--%>
+
+
+		<script type="text/javascript" src="${pageContext.request.contextPath}/resources/script/jquery-ui.min.js"></script>
 <%--		<script type="text/javascript" src="//d3gcli72yxqn2z.cloudfront.net/connect/v4/asperaweb-4.min.js"></script>--%>
-		<script type="text/javascript" src="/resources/connect/v4/asperaweb-4.min.js"></script>
-	   	<script type="text/javascript" src="/resources/connect/v4/connectinstaller-4.min.js"></script>
+		<script type="text/javascript" src="${pageContext.request.contextPath}/resources/connect/v4/asperaweb-4.min.js"></script>
+	   	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/connect/v4/connectinstaller-4.min.js"></script>
 <%--		<script type="text/javascript" src="//d3gcli72yxqn2z.cloudfront.net/connect/v4/connectinstaller-4.min.js"></script>--%>
 <%--		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">--%>
 <%--		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>--%>
-		<link rel="stylesheet" href="/resources/lib/bootstrap.min.css">
-		<script type="text/javascript" src="/resources/lib/bootstrap.min.js"></script>
-		<link rel="stylesheet" href="<%=request.getContextPath() %>/resources/style.css" type="text/css">
-		<link rel="stylesheet" href="<%=request.getContextPath() %>/resources/mystyle.css" type="text/css">
+<!--		<link rel="stylesheet" href="/resources/lib/bootstrap.min.css">  -->
+<!--		<script type="text/javascript" src="/resources/lib/bootstrap.min.js"></script>  -->
 
-		<script src="${request.getContextPath()}/resources/my-common.js?ver=1"></script>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstraplogin.css" >
+
+
+		<link rel="stylesheet" href="<%=request.getContextPath() %>/resources/css/style.css" type="text/css">
+		<link rel="stylesheet" href="<%=request.getContextPath() %>/resources/css/mystyle.css" type="text/css">
+
+
+		<script src="${request.getContextPath()}/resources/script/my-common.js?ver=1"></script>
+
+<!--		<script type="text/javascript" src="/resources/lib/bootstrap.bundle.min.js"></script>
+		<link rel="stylesheet" href="/resources/lib/bootstrap.min.css" >
+		<link rel="stylesheet" href="/resources/lib/bootstraplogin.css" >
+-->
+
+
 
 		<!-- script src="<%=request.getContextPath() %>/resources/script.js?ver=1"></script-->
 		<%-- <script src="${request.getContextPath()}/resources/script.js?ver=1"></script> --%>
 		
 	</head>
 
-	<body>
-		<h2 class="page-title">ASPERA by KJLEE</h2>
-		<input id="logoutBtn" type="button" class="btn btn-default" style="position: absolute; right: 250px; top: 50px; width 120px" value="logout"></input>
 
-		<h4 id="info">구현 정보</h4>
-		<div id="infoPannel">
+
+	<body>
+
+<!--
+	<header>
+		<div class="header_wrap fixed">
+			<nav>
+				<ul>
+					<li>
+						<a href="#">IBM ASPERA</a>
+					</li>
+				</ul>
+				</div>
+			</nav>
+		</div>
+	</header>
+-->
+
+
+					<!--					<div class="product_img clear">
+                                            <span>지구에서 본 우주를 담다</span>
+                                            <img src="resources/images/main/D850_img.png" alt="d850카메라사진">
+                                        </div>
+                    -->
+	<!--			</a>
+			</div>
+		</div>
+	</div>
+
+	-->
+
+						<!--<h2 class="page-title bg_st_01">ASPERA Web Transfer </h2>-->
+
+
+
+
+						<div class="input-group">
+							<input id="logoutBtn" type="button" class="btn btn-danger" style="position: absolute; right: 230px; top: 50px; width 120px" value="Log Out">
+						</div>
+
+
+
+
+
+						<div class="visual" style="height: 250px; object-fit: contain;">
+							<div class="banner_wrap">
+
+
+								<div class="display-1" style="display: table; margin-left: auto; margin-right: auto; height: 220px; line-height : 220px;font-family: Arial;font-size: 96px;font-weight: 400;color: #f8f9fa;background-color: transparent;">IBM ASPERA</div>
+
+
+
+								<div class="banner1 banner" style="height: 250px; object-fit: contain;">
+
+								<a href="#">
+										<div class="video_wrap" style="object-fit=cover;">
+											<video id="slider" muted autoplay controls loop playsinline>
+												<source src="${pageContext.request.contextPath}/resources/video/850.mp4" type="video/mp4">
+											이 문장은 여러분의 브라우저가 video 태그를 지원하지 않을 때 화면에 표시됩니다!
+											</video>
+										</div>
+
+
+<!--									<div class="product_img clear">
+										<span>IBM ASPERA</span>
+								</div>
+-->
+
+
+									</a>
+								</div>
+							</div>
+
+						</div>
+
+<p{line-height: 5px}></p>
+											<!--<h3 class="page-title bg_st_01" style="position:center;color:aquamarine;">ASPERA Web Transfer </h3>
+
+
+		<input id="logoutBtn" type="button" class="btn btn-danger" style="position: absolute; right: 250px; top: 50px; width 120px" value="logout"></input>
+-->
+		<!--<h4 id="info " class="bg_st_02">개발환경 확인은 여기를 클릭하세요!</h4>-->
+		<!--<h5 id="info" style="position:center;color:#b02a37;">개발환경 확인은 여기를 클릭하세요!</h5>-->
+		<!--<div id="infoPannel" class="">-->
+			<!--<div id="infoPannel" style="position:center;color:#4cae4c;">
 		<ul>
 			<li>개발 환경
 				<ul>
+					<li>Aspera Connect SDK 3.11.2</li>
 					<li>Spring framework 3.1.1</li>
 					<li>Java 1.8</li>
 					<li>Tomcat 9.0</li>
-					<li>jQuery 1.11.2</li>
-					<li>Aspera Connect 3.9.9.177872</li>
+					<li>jQuery 3.6.0</li>
+					<li>Bootstrap 5.0.2</li>
+					<li>Maintained by lkjreal@gmail.com</li>
 				</ul>
 			</li>
 			<li>서버 및 계정 정보
 				<ul>
-					<li>Server : Linux 115.71.42.22</li>
-					<li>Node API 계정 : admin</li>
+					<li>Server : Linux www.asperalife.net</li>
+					<li>Node API 계정 : node_asperatest</li>
 					<li>Aspera Connect 계정 : asperatest</li>
 				</ul>
 			</li>
 		</ul>
 		</div>
+-->
 
-		<!--Upload Area, note IDs match JavaScript for targeting-->
+
+
+
+
+
+
+
+
+						<!--Upload Area, note IDs match JavaScript for targeting-->
 		<div class="row" id="uploadArea">
 			<div class="col-lg-5">
+				<!--<div class="input-group bg_st_03">-->
 				<div class="input-group">
-					<button class="btn btn-default" id="refresh" type="button" name="${self.path }">Refresh</button>&nbsp;
-					<button class="btn btn-default" id="create" type="button" name="${self.path }">Create Folder</button>&nbsp;
-          			<button class="btn btn-default" id="downloadBtn" type="button" name="${self.path }">Download</button>&nbsp;
-					<button class="btn btn-default" id="uploadfile" type="button" name="${self.path }">Upload File</button>&nbsp;
-					<button class="btn btn-default" id="uploadfolder" type="button" name="${self.path }">Upload Folder</button>&nbsp;
-					<button class="btn btn-default" id="deleteBtn" type="button" name="${self.path }">Delete Files</button>&nbsp;
-					<button class="btn btn-default" id="transferWindowBtn" type="button" name="${self.path }">Transfer Window</button>&nbsp;
-					<button class="btn btn-default" id="ajaxtest" type="button">Ajax API Test</button>&nbsp;
+					<button class="btn btn-success btn-sm" id="refresh" type="button" name="${self.path }">
+						<svg class="svg_01" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+							<path d="M105.1 202.6c7.7-21.8 20.2-42.3 37.8-59.8c62.5-62.5 163.8-62.5 226.3 0L386.3 160H336c-17.7 0-32 14.3-32 32s14.3 32 32 32H463.5c0 0 0 0 0 0h.4c17.7 0 32-14.3 32-32V64c0-17.7-14.3-32-32-32s-32 14.3-32 32v51.2L414.4 97.6c-87.5-87.5-229.3-87.5-316.8 0C73.2 122 55.6 150.7 44.8 181.4c-5.9 16.7 2.9 34.9 19.5 40.8s34.9-2.9 40.8-19.5zM39 289.3c-5 1.5-9.8 4.2-13.7 8.2c-4 4-6.7 8.8-8.1 14c-.3 1.2-.6 2.5-.8 3.8c-.3 1.7-.4 3.4-.4 5.1V448c0 17.7 14.3 32 32 32s32-14.3 32-32V396.9l17.6 17.5 0 0c87.5 87.4 229.3 87.4 316.7 0c24.4-24.4 42.1-53.1 52.9-83.7c5.9-16.7-2.9-34.9-19.5-40.8s-34.9 2.9-40.8 19.5c-7.7 21.8-20.2 42.3-37.8 59.8c-62.5 62.5-163.8 62.5-226.3 0l-.1-.1L125.6 352H176c17.7 0 32-14.3 32-32s-14.3-32-32-32H48.4c-1.6 0-3.2 .1-4.8 .3s-3.1 .5-4.6 1z"/></svg>
+						Refresh</button>
+					<button class="btn btn-success btn-sm" id="create" type="button" name="${self.path }">Create Folder</button>
+          			<button class="btn btn-success btn-sm blue_bg" id="downloadBtn" type="button" name="${self.path }">Download</button>
+					<button class="btn btn-success btn-sm blue_bg" id="uploadfile" type="button" name="${self.path }">Upload File</button>
+					<button class="btn btn-success btn-sm blue_bg" id="uploadfolder" type="button" name="${self.path }">Upload Folder</button>
+					<button class="btn btn-success btn-sm red_bg" id="deleteBtn" type="button" name="${self.path }">Delete Files/Folders</button>
+					<button class="btn btn-success btn-sm" id="transferWindowBtn" type="button" name="${self.path }">Transfer Window</button>
+					<button class="btn btn-success btn-sm" id="ajaxtest" type="button">Ajax API Test</button>
 				</div>
 			</div>
 		</div>
 
-		<div class="row">
+
+
+
+
+		<div class="row bg_img_mou">
+
 			<div class="col-lg-10">
 				<div class="panel panel-default">
 					<div class="panel-heading" id="currentDir">
@@ -118,7 +288,13 @@
 										<td class="size-col">${i.size }</td>
 									</c:when>
 								</c:choose>
-								<td class="mod-col">${i.mtime }</td>
+
+
+
+
+
+
+							<td class="mod-col">${i.mtime }</td>
 								<td class="act-col" name="${self.path }"><a class="download" id="${i.basename }">download</a></td>
 								<td>
 									<div id="pageMenuButton">
@@ -132,6 +308,9 @@
 							</tr>
 						</c:forEach>
 					</table>
+
+
+
 					<div class="panel-heading" id="foot">
 						<span>
 							<select id="sort">
@@ -253,7 +432,8 @@
       id="transferPopup"
       style="
         position: absolute;
-        top: 30%;
+        background-color:MediumSeaGreen;
+        top: 60%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 550px;
@@ -280,7 +460,7 @@
           <span id="Aspera_UP_total_upload_percent" class=""></span>
           <span class="">-</span>
           <span id="Aspera_UP_current_upload_file_name"></span>
-          <div style="float: right">
+          <div class="close_btn_st" style="float: right">
             <button
               id="Aspera_UP_close_btn"
               type="button"
@@ -293,7 +473,7 @@
                 font-size: 0;
                 line-height: -1000em;
                 border: 0;
-                background: url(<%=request.getContextPath()%>/resources/image/close_btn.png)
+                background: url(<%=request.getContextPath()%>/resources/image/close.png)
                   no-repeat 0 0;
                 background-size: cover;
               "
@@ -324,21 +504,46 @@
               >
                 전체 전송
               </div>
-              <div style="flex: 1">
-                <span
-                  id="Aspera_UP_total_upload_progress_bar"
-                  class="pbar_value"
-                  style="
-                    display: inline-block;
-                    width: 0%;
-                    height: 100%;
-                    background-color: blue;
-                  "
-                ></span>
-              </div>
+
+<!--              <div style="flex: 1">
+				  <div class="progress progress-striped">
+					  <div class="progress-bar" id="Aspera_UP_total_upload_progress_bar">
+					  </div>
+				  </div>
+-->
+
+
+			  <div style="flex: 1">
+				  <div class="progress2 progress-moved">
+					  <div class="progress-bar2" id="Aspera_UP_total_upload_progress_bar">
+					  </div>
+				  </div>
+
+
+<!--			  <div style="flex: 1">
+				  <div class="progress progress-striped">
+					  <div class="progress-bar" id="Aspera_UP_total_upload_progress_bar">
+					  </div>
+				  </div>
+-->
+
+
+
+
+
+
+
+
+					  <!--  <span class="progress-striped"  /> -->
+
+
+
+				 </div>
             </div>
 
-            <div style="height: 60px; margin: 5px; display: flex">
+
+
+            <div  class="pop_status" style="height: 60px; margin: 5px; display: flex">
               <div style="width: 90px; flex-direction: column">
                 <div class="innerTable1 innerText1">전송 파일:</div>
                 <div class="innerTable1 innerText1">전송 용량:</div>
@@ -414,7 +619,7 @@
               <div
                 style="
                   overflow-y: scroll;
-                  height: 75px;
+                  height: 136px;
                   display: flex;
                   flex-direction: column;
                   justify-content: flex-start;
@@ -643,7 +848,7 @@
           <input id="cancelOrCloseBtn"
             type="button"
             style="position: absolute; top: 2px; right: 20px"
-            class="button1"
+            class="button1 red_btn"
             value="취소"
             onclick="cancelAsperaTransfer()"
           />
@@ -654,8 +859,12 @@
 
 
 
+
 	</body>
 </html>
+
+
+
 
 
 
@@ -691,9 +900,17 @@ let installType = {
 let fileControls = {};
 fileControls.setup = function ()
 {
+
+	// var CONNECT_INSTALLER = "//d3gcli72yxqn2z.cloudfront.net/connect/v4";
+
+
+	// this.asperaWeb = new AW4.Connect({sdkLocation: CONNECT_INSTALLER, pollingTime: 100, minVersion: "3.11.0", dragDropEnabled: true});
+	// var asperaInstaller = new AW4.ConnectInstaller({sdkLocation: CONNECT_INSTALLER});
+
+	var CONNECT_INSTALLER = "/resources/connect/v4";
 	// Add the Connect Plugin.
-	asperaWeb = new AW4.Connect({pollingTime: 100});
-	connectInstaller = new AW4.ConnectInstaller();
+	asperaWeb = new AW4.Connect({sdkLocation: CONNECT_INSTALLER, pollingTime: 100, minVersion: "3.11.0", dragDropEnabled: true});
+	connectInstaller = new AW4.ConnectInstaller({sdkLocation: CONNECT_INSTALLER});
 	asperaWeb.addEventListener(AW4.Connect.EVENT.STATUS, statusEventListener);
 	asperaWeb.addEventListener(AW4.Connect.EVENT.TRANSFER, transferEventListener);
 
@@ -849,8 +1066,8 @@ $("#ajaxtest").click(function (){
 				'Content-Type': 'application/json'
 			},
 			body: JSON.stringify({
-				id: 'myid',
-				password: 'mypassword'
+				id: 'admin',
+				password: 'rootroot'
 			})
 		});
 		const content = await rawResponse.json();
@@ -1128,7 +1345,7 @@ $("#uploadfolder").click(function(){
 		success: function(dataTransfer) {
 			var temp = {
 				"direction": "send",
-				"remote_host": "115.71.42.22",
+				"remote_host": "www.asperalife.net",
 				"destination_root": current,
 				"paths": [
 					{
@@ -1137,6 +1354,7 @@ $("#uploadfolder").click(function(){
 					}
 				],
 				"remote_user": "asperatest",
+				"remote_password": "rootroot",
 				"cipher": "none",
 				"http_fallback": "true",
 				"http_fallback_port": 8080,
@@ -1147,7 +1365,7 @@ $("#uploadfolder").click(function(){
 				"lock_policy": "false",
 				"lock_target_rate": "false",
 				"min_rate_kbps": 0,
-				"target_rate_kbps": 1000000
+				"target_rate_kbps": 100000
 			};
 			asperaWeb.startTransfer(temp);
 		},

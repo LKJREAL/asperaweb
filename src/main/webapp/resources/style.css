@@ -157,6 +157,24 @@ body
 	color: #ccc;
 	display:none;
 }
+#uploadArea > div {
+	width: 100%;
+}
+
+.bg_st_02 {
+	background: #fccb90;
+}
+.bg_st_03 {
+	 background: #f1a899;
+ }
+.bg_img_mou {
+	background: url(/resources/image/mountain.jpg) 50% / cover;
+}
+
+
+
+
+
 
 /* Since this version is responsive, we remove the date when on mobile to ensure it looks good on the small screen */
 @media screen and (max-width: 700px) {
