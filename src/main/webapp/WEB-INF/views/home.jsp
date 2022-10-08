@@ -285,6 +285,7 @@
 							<tr>
 <%--								<td class="type-col" style="text-decoration: underline"><a id="parentDirectory" name="${self.path }">Up..</a></td>--%>
 <%--								<td class="name-col"><a id="parentDirectory" name="${self.path }">Parent Directory</a></td>--%>
+								<td><input type="checkbox" class="chkItem" style="display: none"></td>
 	 							<td class="type-col" ></td>
 								<td class="name-col" style="text-decoration: underline"><a id="parentDirectory" name="${self.path }">Up...</a></td>
 								<td class="size-col"></td>
@@ -295,7 +296,7 @@
 						</c:if>
 						<c:forEach var="i" items="${list}">
 							<tr>
-                <td><input type="checkbox" id="chk_${i.basename}" class="chkItem"></td>
+                				<td><input type="checkbox" id="chk_${i.basename}" class="chkItem"></td>
 								<td class="type-col">${i.type }</td>
 								<c:choose>
 									<c:when test="${i.type eq 'directory'}">
