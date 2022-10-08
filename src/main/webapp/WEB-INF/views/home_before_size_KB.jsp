@@ -1,5 +1,4 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@page import="com.aspera.web.vo.itemVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
@@ -271,27 +270,25 @@
 					<table class="table" id="fileListTable">
 						<tr>
 							<!--Table Header Rows, make sure that generated table listings match pattern-->
-						  <th>
-							<input type="checkbox">
-						  </th>
+              <th>
+                <input type="checkbox">
+              </th>
 							<th class="type-col headerRow">Type<span class="glyphicon glyphicon-sort-by-attributes sort-icon" aria-hidden="true"></span></th>
 							<th class="name-col headerRow">Name<span class="glyphicon glyphicon-sort-by-attributes sort-icon" aria-hidden="true"></span></th>
 							<th class="size-col headerRow">Size<span class="glyphicon glyphicon-sort-by-attributes sort-icon" aria-hidden="true"></span></th>
 							<th class="mod-col headerRow">Last Modified<span class="glyphicon glyphicon-sort-by-attributes sort-icon" aria-hidden="true"></span></th>
 							<th class="act-col"></th>
-							<th class="act-col"></th>
+							<th ></th>
 						</tr>
 						<c:if test="${self.path ne '/' }">
 							<tr>
-<%--								<td class="type-col" style="text-decoration: underline"><a id="parentDirectory" name="${self.path }">Up..</a></td>--%>
-<%--								<td class="name-col"><a id="parentDirectory" name="${self.path }">Parent Directory</a></td>--%>
-	 							<td class="type-col" ></td>
-								<td class="name-col" style="text-decoration: underline"><a id="parentDirectory" name="${self.path }">Up...</a></td>
+								<td class="type-col"></td>
+								<td class="name-col"><a id="parentDirectory" name="${self.path }">Parent Directory</a></td>
 								<td class="size-col"></td>
 								<td class="mod-col"></td>
 								<td class="act-col"></td>
 								<td></td>
-				            </tr>
+							</tr>						
 						</c:if>
 						<c:forEach var="i" items="${list}">
 							<tr>
@@ -304,9 +301,7 @@
 									</c:when>
 									<c:when test="${i.type ne 'directory'}">
 										<td class="name-col">${i.basename }</td>
-										<fmt:formatNumber var="test" type="number" maxFractionDigits="3" value="${Math.round(i.size/1024)}" />
-<%--										<td class="size-col" style="text-align: right;">${ Math.round(i.size/1024) }KB</td>--%>
-										<td class="size-col" style="text-align: right;">${ test }KB</td>
+										<td class="size-col">${i.size }</td>
 									</c:when>
 								</c:choose>
 
@@ -1232,27 +1227,7 @@ $(".delete").click(function(){
 			current = $(this).attr("name") + "/";
 		}
 
-
-//		filesPost("delete", current, [$(this).attr("id")]);
-
-		filesPost("delete", current, $(this).attr("id"));
-
-
-
-
-	//	console.log(current, "1229", "[$(this).attr("id")]");
-	//	console.log(current, "1230",  "$(this).attr("id")");
-		console.log(current, "11111111111111111111111231", $(this).attr("id"));
-		console.log(current, "11111111111111111111111231", $(this).attr("id"));
-		console.log(current, "11111111111111111111111231", $(this).attr("id"));
-		console.log(current, "11111111111111111111111231", $(this).attr("id"));
-		console.log(current, "11111111111111111111111231", $(this).attr("id"));
-		console.log(current, "11111111111111111111111231", $(this).attr("id"));
-		console.log(current, "11111111111111111111111231", $(this).attr("id"));
-		console.log(current, "11111111111111111111111231", $(this).attr("id"));
-
-
-
+		filesPost("delete", current, [$(this).attr("id")]);
 	} else {
 		return;
 	}
@@ -1290,18 +1265,6 @@ $("#deleteBtn").click(function(event){
 		//let currentDirectory = document.getElementById("currentDirectory").value;
 		let currentDirectory = document.getElementById("currentDirectory").innerText;
 		// let currentDirectory = $("#currentDirectory").text();
-
-
-		console.log("333333333333333", currentDirectory, pathList);
-		console.log("333333333333333", currentDirectory, pathList);
-		console.log("333333333333333", currentDirectory, pathList);
-		console.log("333333333333333", currentDirectory, pathList);
-		console.log("333333333333333", currentDirectory, pathList);
-		console.log("333333333333333", currentDirectory, pathList);
-		console.log("333333333333333", currentDirectory, pathList);
-		console.log("333333333333333", currentDirectory, pathList);
-
-
 		filesPost("delete", currentDirectory, pathList);
 
 	} else {
@@ -1399,8 +1362,7 @@ $("#uploadfolder").click(function(){
 		success: function(dataTransfer) {
 			var temp = {
 				"direction": "send",
-			//	"remote_host": "www.asperalife.net",
-			 	"remote_host": "115.71.42.22",
+				"remote_host": "www.asperalife.net",
 				"destination_root": current,
 				"paths": [
 					{
@@ -1409,7 +1371,6 @@ $("#uploadfolder").click(function(){
 					}
 				],
 				"remote_user": "asperatest",
-			//	"remote_password": "Passw0rd!",
 				"remote_password": "rootroot",
 				"cipher": "none",
 				"http_fallback": "true",
@@ -1666,8 +1627,6 @@ function statusEventListener(eventType, data) {
 	} else if (eventType === AW4.Connect.EVENT.STATUS && data == AW4.Connect.STATUS.RUNNING) {
 		connectInstaller.connected();
 	}
-
-
 };
 
 // 아스페라 전송이벤트 관련 리스너 함수

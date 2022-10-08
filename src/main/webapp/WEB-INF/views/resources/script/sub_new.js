@@ -3,10 +3,10 @@ $(document).ready(function(){
      $(window).scroll(function(){
          TOP=$(window).scrollTop();
          console.log(TOP)
-    var serTitleOffset= $('.sec1 .title').offset().top; 
+    // var serTitleOffset= $('.sec1 .title').offset().top;
    /* console.log(serTitleOffset);*/
-    serTitleOffset2=Number(serTitleOffset); 
-    serTitleOffset=serTitleOffset-700;
+    // serTitleOffset2=Number(serTitleOffset);
+    // serTitleOffset=serTitleOffset-700;
     
     if(TOP>serTitleOffset){
        $('.sec1 .title, .sec1 .content').addClass('on');
@@ -50,4 +50,5 @@ $(document).ready(function(){
     
     var sec2Height=Number($('.sec2_content img').height());
     $('.sec2_content').height(sec2Height);
+
 });

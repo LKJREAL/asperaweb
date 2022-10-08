@@ -252,7 +252,7 @@ html {
 
 #transferPopup {
 	width: 40vw !important;
-	height: 40vh !important;
+	/*height: 40vh !important;*/
 	/*width: 40vw; 40vw란 브라우저 전체 화면 가로사이즈의 40%를 의미한다  */
 	/*height: 60vh; 60vw란 브라우저 전체 화면 세로사이즈의 60%를 의미한다  */
 }

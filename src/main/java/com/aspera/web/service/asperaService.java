@@ -137,7 +137,7 @@ public class asperaService {
 				break;
 			}
 
-			OutputStreamWriter wr = new OutputStreamWriter(con.getOutputStream());
+			OutputStreamWriter wr = new OutputStreamWriter(con.getOutputStream(), "UTF-8");
 			wr.write(json); // json �삎�떇�쓽 message �쟾�떖
 			wr.flush();
 

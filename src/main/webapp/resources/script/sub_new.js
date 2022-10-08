@@ -3,10 +3,11 @@ $(document).ready(function(){
      $(window).scroll(function(){
          TOP=$(window).scrollTop();
          console.log(TOP)
-    var serTitleOffset= $('.sec1 .title').offset().top; 
+         /*** 09.30 임시주석 **/
+   /* var serTitleOffset= $('.sec1 .title').offset().top; */
    /* console.log(serTitleOffset);*/
-    serTitleOffset2=Number(serTitleOffset); 
-    serTitleOffset=serTitleOffset-700;
+    // serTitleOffset2=Number(serTitleOffset);
+    // serTitleOffset=serTitleOffset-700;
     
     if(TOP>serTitleOffset){
        $('.sec1 .title, .sec1 .content').addClass('on');
